@@ -12,17 +12,17 @@ const sobremesaImage = "https://images.unsplash.com/photo-1551024506-0bccd828d30
 export const Route = createFileRoute("/experiencia")({
   head: () => ({
     meta: [
-      { title: "Experiência — KORA Table" },
+      { title: "Experiência — MUKANDA Cozinha" },
       {
         name: "description",
         content:
-          "O ambiente do KORA Table: uma sala de barro e madeira em Luanda, luz de fim de tarde, terraço e uma cozinha aberta. Site de demonstração fictício.",
+          "O ambiente do MUKANDA Cozinha: uma sala de barro e madeira em Luanda, luz de fim de tarde, terraço e uma cozinha aberta. Site de demonstração fictício.",
       },
-      { property: "og:title", content: "Experiência — KORA Table" },
+      { property: "og:title", content: "Experiência — MUKANDA Cozinha" },
       {
         property: "og:description",
         content:
-          "Ambiente, galeria e detalhes da experiência no KORA Table, restaurante contemporâneo fictício em Luanda.",
+          "Ambiente, galeria e detalhes da experiência no MUKANDA Cozinha, restaurante contemporâneo fictício em Luanda.",
       },
       { property: "og:url", content: "/experiencia" },
       { property: "og:type", content: "website" },
@@ -93,10 +93,10 @@ function ExperienciaPage() {
             id="experiencia-title"
             className="mt-3 font-display text-4xl font-semibold leading-tight text-foreground sm:text-5xl"
           >
-            Mais do que jantar: estar à mesa.
+            Comer bem também é criar memória.
           </h1>
           <p className="mt-4 leading-relaxed text-muted-foreground sm:text-lg">
-            Em Luanda, a noite começa devagar. No KORA Table, a luz desce, as conversas esticam-se e
+            Em Luanda, a mesa ganha outro ritmo. No MUKANDA Cozinha, a luz desce, as conversas esticam-se e
             cada prato chega ao ritmo da cozinha.
           </p>
         </div>
@@ -107,7 +107,7 @@ function ExperienciaPage() {
           <Reveal>
             <img
               src={ambienteImage}
-              alt="Sala do KORA Table ao anoitecer: paredes terracota, candeeiros de vime, mesas postas com lanternas e vista para o pôr do sol."
+              alt="Sala do MUKANDA Cozinha ao anoitecer: paredes terracota, candeeiros de vime, mesas postas com lanternas e vista para o pôr do sol."
               width={1024}
               height={1024}
               loading="lazy"
@@ -120,7 +120,7 @@ function ExperienciaPage() {
               id="ambiente-title"
               className="mt-3 font-display text-3xl font-semibold leading-tight sm:text-4xl"
             >
-              Barro, madeira e luz de fim de tarde.
+              Texturas naturais e luz de fim de tarde.
             </h2>
             <p className="mt-5 leading-relaxed text-muted-foreground">
               Desenhamos a sala para desacelerar: mesas bem distanciadas, texturas naturais e uma

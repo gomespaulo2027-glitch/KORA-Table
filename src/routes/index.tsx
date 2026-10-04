@@ -85,12 +85,12 @@ function HomePage() {
               uma sala feita para demorar à mesa.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <Link
-                to="/contacto"
+              <a
+                href="/contacto"
                 className="inline-flex items-center justify-center rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-lg transition-all duration-300 hover:-translate-y-0.5 hover:bg-clay"
               >
                 Reservar mesa
-              </Link>
+              </a>
               <Link
                 to="/menu"
                 className="inline-flex items-center justify-center gap-2 rounded-full border border-cream/30 bg-cream/10 px-6 py-3 text-sm font-semibold text-cream backdrop-blur transition-colors hover:bg-cream/20"

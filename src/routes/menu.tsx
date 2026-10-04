@@ -28,22 +28,14 @@ export const Route = createFileRoute("/menu")({
   component: MenuPage,
 });
 
+const principais = menuCategories.find((category) => category.id === "principais")!;
+const entradas = menuCategories.find((category) => category.id === "entradas")!;
+const sobremesas = menuCategories.find((category) => category.id === "sobremesas")!;
+
 const signatures = [
-  {
-    image: moambaImage,
-    alt: "Prato em destaque do MUKANDA Cozinha.",
-    ...menuCategories[1].dishes[0],
-  },
-  {
-    image: camaraoImage,
-    alt: "Prato em destaque do MUKANDA Cozinha.",
-    ...menuCategories[0].dishes[2],
-  },
-  {
-    image: sobremesaImage,
-    alt: "Sobremesa em destaque do MUKANDA Cozinha.",
-    ...menuCategories[2].dishes[0],
-  },
+  { image: moambaImage, alt: `Prato em destaque do ${restaurant.name}.`, ...principais.dishes[0]! },
+  { image: camaraoImage, alt: `Prato em destaque do ${restaurant.name}.`, ...entradas.dishes[2]! },
+  { image: sobremesaImage, alt: `Sobremesa em destaque do ${restaurant.name}.`, ...sobremesas.dishes[0]! },
 ];
 
 function MenuPage() {

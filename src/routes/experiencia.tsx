@@ -3,10 +3,10 @@ import { Users, Landmark, Star } from "lucide-react";
 import { Reveal } from "@/components/kora/reveal";
 import { restaurant } from "@/lib/kora-data";
 const ambienteImage = "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1400&q=85";
-const heroImage = "https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?auto=format&fit=crop&w=1400&q=85";
-const moambaImage = "https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=1024&q=85";
-const camaraoImage = "https://images.unsplash.com/photo-1565680018434-b513d5e5fd47?auto=format&fit=crop&w=1024&q=85";
-const polvoImage = "https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1024&q=85";
+const heroImage = "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1400&q=85";
+const moambaImage = "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1024&q=85";
+const camaraoImage = "https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=1024&q=85";
+const polvoImage = "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1024&q=85";
 const sobremesaImage = "https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=1024&q=85";
 
 export const Route = createFileRoute("/experiencia")({

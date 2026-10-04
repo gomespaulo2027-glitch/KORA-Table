@@ -11,13 +11,13 @@ const sobremesaImage = "https://images.unsplash.com/photo-1551024506-0bccd828d30
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "KORA Table — Sabores de Angola, reinterpretados à mesa" },
+      { title: "MUKANDA Cozinha — Sabores de Angola, reinterpretados à mesa" },
       {
         name: "description",
         content:
-          "Restaurante contemporâneo fictício em Luanda: cozinha angolana reinterpretada, pratos de assinatura e ambiente acolhedor. Reservas pelo WhatsApp. Site de demonstração.",
+          "Cozinha angolana de autor fictício em Luanda: cozinha angolana reinterpretada, pratos de assinatura e ambiente acolhedor. Reservas pelo WhatsApp. Site de demonstração.",
       },
-      { property: "og:title", content: "KORA Table — Sabores de Angola, reinterpretados à mesa" },
+      { property: "og:title", content: "MUKANDA Cozinha — Sabores de Angola, reinterpretados à mesa" },
       {
         property: "og:description",
         content:
@@ -62,7 +62,7 @@ function HomePage() {
       <section className="relative isolate overflow-hidden" aria-labelledby="hero-title">
         <img
           src={heroImage}
-          alt="Prato de assinatura do KORA Table: peixe grelhado com banana-pão, salada fresca e molho, servido em cerâmica escura sobre toalha de linho creme."
+          alt="Prato de assinatura do MUKANDA Cozinha: peixe grelhado com banana-pão, salada fresca e molho, servido em cerâmica escura sobre toalha de linho creme."
           width={1920}
           height={1080}
           className="absolute inset-0 -z-10 h-full w-full object-cover"
@@ -72,7 +72,7 @@ function HomePage() {
         <div className="shell flex min-h-[78svh] flex-col justify-end py-16 sm:min-h-[82svh] sm:justify-center sm:py-24">
           <div className="max-w-2xl animate-rise">
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-ochre">
-              Luanda · Cozinha contemporânea
+              Luanda · Cozinha angolana de autor
             </p>
             <h1
               id="hero-title"
@@ -112,10 +112,10 @@ function HomePage() {
               id="cozinha-title"
               className="mt-3 font-display text-3xl font-semibold leading-tight text-foreground sm:text-4xl"
             >
-              Tradição angolana, feita com calma e precisão.
+              Sabores de família, tratados com técnica e precisão.
             </h2>
             <p className="mt-5 leading-relaxed text-muted-foreground">
-              A cozinha do KORA Table parte dos sabores que todos conhecemos — moamba, calulu,
+              A cozinha do MUKANDA Cozinha parte dos sabores que todos conhecemos — moamba, calulu,
               funge, peixe da costa — e trata cada um como um prato de autor: produtos de mercado,
               cocções longas e apresentação elegante, sem perder a alma.
             </p>
@@ -123,18 +123,18 @@ function HomePage() {
               {[
                 {
                   icon: Leaf,
-                  title: "Mercado e estação",
-                  text: "Compramos pequeno e fresco: pescado da costa, folhas e raízes de produtores da região.",
+                  title: "Ingredientes frescos",
+                  text: "Escolhemos ingredientes frescos e valorizamos sabores familiares.",
                 },
                 {
                   icon: SunMedium,
-                  title: "Brasa e cocções lentas",
-                  text: "Grelha de lenha e cozinhados lentos dão profundidade a carnes, peixes e legumes.",
+                  title: "Brasa e tempo",
+                  text: "A brasa e as cocções lentas dão profundidade a carnes, peixes e legumes.",
                 },
                 {
                   icon: Wine,
-                  title: "Harmonização pensada",
-                  text: "Carta curta de vinhos portugueses e sul-africanos, escolhida prato a prato.",
+                  title: "Bebidas à mesa",
+                  text: "Sumos, mocktails e vinhos escolhidos para acompanhar cada prato.",
                 },
               ].map((item) => (
                 <li key={item.title} className="flex gap-4">
@@ -170,7 +170,7 @@ function HomePage() {
                 className="aspect-[4/5] w-full rounded-3xl object-cover shadow-xl"
               />
               <p className="absolute bottom-4 left-4 right-4 rounded-2xl bg-espresso/85 px-5 py-3 text-sm font-medium text-cream backdrop-blur">
-                Moamba de galinha da casa — servida com funge de silabalundo.
+                Peixe grelhado à Mukanda — servido com banana-pão e legumes.
               </p>
             </div>
           </Reveal>
@@ -186,7 +186,7 @@ function HomePage() {
               id="destaques-title"
               className="mt-3 max-w-xl font-display text-3xl font-semibold leading-tight text-foreground sm:text-4xl"
             >
-              Três pratos que definem a casa.
+              Três sabores que definem a casa.
             </h2>
           </Reveal>
           <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -236,7 +236,7 @@ function HomePage() {
               id="depoimentos-title"
               className="mt-3 font-display text-3xl font-semibold text-foreground sm:text-4xl"
             >
-              Palavras de clientes
+              Experiências à mesa
             </h2>
             <p className="mt-2 text-sm text-muted-foreground">
               Depoimentos fictícios, criados apenas para esta demonstração.
@@ -269,7 +269,7 @@ function HomePage() {
               id="cta-title"
               className="mx-auto max-w-2xl font-display text-3xl font-semibold leading-tight text-cream sm:text-4xl"
             >
-              A mesa está posta. Falta só o convite da casa — o seu.
+              A mesa está posta. Venha conhecer a casa.
             </h2>
             <p className="mx-auto mt-4 max-w-xl text-cream/75">
               Reserve pelo WhatsApp e deixe o resto connosco. Grupos até oito pessoas confirmam na

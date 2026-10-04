@@ -31,24 +31,18 @@ export const Route = createFileRoute("/menu")({
 const signatures = [
   {
     image: moambaImage,
-    alt: "Moamba de galinha com funge, servida em tigela de barro escuro sobre base de palha trançada.",
-    name: "Moamba de galinha",
-    price: "9.500 Kz",
-    tag: "Preferido da casa",
+    alt: "Prato em destaque do MUKANDA Cozinha.",
+    ...menuCategories[1].dishes[0],
   },
   {
     image: camaraoImage,
-    alt: "Camarões grelhados com manteiga de piri-piri e meio limão chamuscado em prato de pedra escura.",
-    name: "Camarão piri-piri na grelha",
-    price: "12.500 Kz",
-    tag: "Chegada recente",
+    alt: "Prato em destaque do MUKANDA Cozinha.",
+    ...menuCategories[0].dishes[2],
   },
   {
     image: sobremesaImage,
-    alt: "Fatia de mousse de coco com caramelo e lascas de coco tostado num prato de cerâmica escura.",
-    name: "Cocada cremosa com caramelo",
-    price: "3.200 Kz",
-    tag: "Doce da casa",
+    alt: "Sobremesa em destaque do MUKANDA Cozinha.",
+    ...menuCategories[2].dishes[0],
   },
 ];
 

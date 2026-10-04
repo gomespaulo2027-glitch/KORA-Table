@@ -8,13 +8,13 @@ const sobremesaImage = "https://images.unsplash.com/photo-1551024506-0bccd828d30
 export const Route = createFileRoute("/menu")({
   head: () => ({
     meta: [
-      { title: "Menu — KORA Table" },
+      { title: "Menu — MUKANDA Cozinha" },
       {
         name: "description",
         content:
-          "Menu de demonstração do KORA Table: entradas, pratos principais, sobremesas e coquetéis inspirados na cozinha angolana. Preços fictícios em Kwanza (Kz).",
+          "Menu de demonstração do MUKANDA Cozinha: entradas, pratos principais, sobremesas e coquetéis inspirados na cozinha angolana. Preços fictícios em Kwanza (Kz).",
       },
-      { property: "og:title", content: "Menu — KORA Table" },
+      { property: "og:title", content: "Menu — MUKANDA Cozinha" },
       {
         property: "og:description",
         content:

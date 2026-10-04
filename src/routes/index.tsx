@@ -31,22 +31,13 @@ export const Route = createFileRoute("/")({
   component: HomePage,
 });
 
+const principais = menuCategories.find((category) => category.id === "principais")!;
+const sobremesas = menuCategories.find((category) => category.id === "sobremesas")!;
+
 const highlights = [
-  {
-    image: camaraoImage,
-    alt: "Prato em destaque do MUKANDA Cozinha.",
-    ...menuCategories[1].dishes[0],
-  },
-  {
-    image: polvoImage,
-    alt: "Prato em destaque do MUKANDA Cozinha.",
-    ...menuCategories[1].dishes[1],
-  },
-  {
-    image: sobremesaImage,
-    alt: "Sobremesa em destaque do MUKANDA Cozinha.",
-    ...menuCategories[2].dishes[0],
-  },
+  { image: camaraoImage, alt: `Prato em destaque do ${restaurant.name}.`, ...principais.dishes[0]! },
+  { image: polvoImage, alt: `Prato em destaque do ${restaurant.name}.`, ...principais.dishes[1]! },
+  { image: sobremesaImage, alt: `Sobremesa em destaque do ${restaurant.name}.`, ...sobremesas.dishes[0]! },
 ];
 
 function HomePage() {

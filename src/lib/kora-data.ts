@@ -1,6 +1,7 @@
 import { templateRestaurant } from "./template-restaurant";
 
 export const restaurant = {
+  city: templateRestaurant.city,
   name: templateRestaurant.name,
   tagline: templateRestaurant.tagline,
   address: templateRestaurant.address,

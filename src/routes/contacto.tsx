@@ -6,17 +6,17 @@ import { restaurant } from "@/lib/kora-data";
 export const Route = createFileRoute("/contacto")({
   head: () => ({
     meta: [
-      { title: "Contacto e reservas — KORA Table" },
+      { title: "Contacto e reservas — MUKANDA Cozinha" },
       {
         name: "description",
         content:
-          "Reserve a sua mesa no KORA Table pelo WhatsApp ou telefone. Horário, endereço fictício e localização ilustrativa em Luanda. Site de demonstração.",
+          "Reserve a sua mesa no MUKANDA Cozinha pelo WhatsApp ou telefone. Horário, endereço fictício e localização ilustrativa em Luanda. Site de demonstração.",
       },
-      { property: "og:title", content: "Contacto e reservas — KORA Table" },
+      { property: "og:title", content: "Contacto e reservas — MUKANDA Cozinha" },
       {
         property: "og:description",
         content:
-          "Reservas pelo WhatsApp, horário e localização ilustrativa do KORA Table em Luanda. Site de demonstração com dados fictícios.",
+          "Reservas pelo WhatsApp, horário e localização ilustrativa do MUKANDA Cozinha em Luanda. Site de demonstração com dados fictícios.",
       },
       { property: "og:url", content: "/contacto" },
       { property: "og:type", content: "website" },
@@ -59,7 +59,7 @@ function ContactoPage() {
             id="contacto-title"
             className="mt-3 font-display text-4xl font-semibold leading-tight text-foreground sm:text-5xl"
           >
-            Reserve a sua mesa.
+            Reserve a sua mesa no MUKANDA.
           </h1>
           <p className="mt-4 leading-relaxed text-muted-foreground sm:text-lg">
             Trabalhamos com reservas simples pelo WhatsApp: diga o dia, a hora e quantas pessoas, e
@@ -139,7 +139,7 @@ function ContactoPage() {
                   id="mapa-title"
                   className="font-display text-2xl font-semibold text-cream sm:text-3xl"
                 >
-                  Estamos no centro de Luanda
+                  Estamos na Maianga, Luanda
                 </h2>
                 <p className="max-w-md text-sm text-cream/75">
                   {restaurant.address}. Bloco ilustrativo de localização — mapa fictício, sem

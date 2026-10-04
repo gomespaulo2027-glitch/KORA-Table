@@ -12,17 +12,17 @@ const sobremesaImage = "https://images.unsplash.com/photo-1551024506-0bccd828d30
 export const Route = createFileRoute("/experiencia")({
   head: () => ({
     meta: [
-      { title: "Experiência — MUKANDA Cozinha" },
+      { title: "Experiência — {restaurant.name}" },
       {
         name: "description",
         content:
-          "O ambiente do MUKANDA Cozinha: uma sala de barro e madeira em Luanda, luz de fim de tarde, terraço e uma cozinha aberta. Site de demonstração fictício.",
+          "O ambiente do {restaurant.name}: uma sala de barro e madeira em Luanda, luz de fim de tarde, terraço e uma cozinha aberta. Site de demonstração fictício.",
       },
-      { property: "og:title", content: "Experiência — MUKANDA Cozinha" },
+      { property: "og:title", content: "Experiência — {restaurant.name}" },
       {
         property: "og:description",
         content:
-          "Ambiente, galeria e detalhes da experiência no MUKANDA Cozinha, restaurante contemporâneo fictício em Luanda.",
+          "Ambiente, galeria e detalhes da experiência no {restaurant.name}, restaurante contemporâneo fictício em Luanda.",
       },
       { property: "og:url", content: "/experiencia" },
       { property: "og:type", content: "website" },
@@ -96,7 +96,7 @@ function ExperienciaPage() {
             Comer bem também é criar memória.
           </h1>
           <p className="mt-4 leading-relaxed text-muted-foreground sm:text-lg">
-            Em Luanda, a mesa ganha outro ritmo. No MUKANDA Cozinha, a luz desce, as conversas esticam-se e
+            Em {restaurant.addressNote.split("—").pop()?.trim() ?? "Luanda"}, a mesa ganha outro ritmo. No {restaurant.name}, a luz desce, as conversas esticam-se e
             cada prato chega ao ritmo da cozinha.
           </p>
         </div>
@@ -107,7 +107,7 @@ function ExperienciaPage() {
           <Reveal>
             <img
               src={ambienteImage}
-              alt="Sala do MUKANDA Cozinha ao anoitecer: paredes terracota, candeeiros de vime, mesas postas com lanternas e vista para o pôr do sol."
+              alt="Sala do {restaurant.name} ao anoitecer: paredes terracota, candeeiros de vime, mesas postas com lanternas e vista para o pôr do sol."
               width={1024}
               height={1024}
               loading="lazy"

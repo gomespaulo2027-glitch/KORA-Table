@@ -8,13 +8,13 @@ const sobremesaImage = "https://images.unsplash.com/photo-1551024506-0bccd828d30
 export const Route = createFileRoute("/menu")({
   head: () => ({
     meta: [
-      { title: "Menu — MUKANDA Cozinha" },
+      { title: `Menu — ${restaurant.name}` },
       {
         name: "description",
         content:
-          "Menu de demonstração do MUKANDA Cozinha: entradas, pratos principais, sobremesas e coquetéis inspirados na cozinha angolana. Preços fictícios em Kwanza (Kz).",
+          `Menu de demonstração do ${restaurant.name}: entradas, pratos principais, sobremesas e bebidas inspiradas na cozinha da casa. Preços fictícios em Kwanza (Kz).`,
       },
-      { property: "og:title", content: "Menu — MUKANDA Cozinha" },
+      { property: "og:title", content: `Menu — ${restaurant.name}` },
       {
         property: "og:description",
         content:

@@ -20,7 +20,7 @@ export function SiteHeader() {
     <header className="sticky top-0 z-50 border-b border-border/70 bg-background/90 backdrop-blur supports-[backdrop-filter]:bg-background/75">
       <a href="#conteudo" className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[60] focus:rounded-md focus:bg-primary focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-primary-foreground">Saltar para o conteúdo</a>
       <div className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-3 shell py-3 sm:flex sm:justify-between sm:py-4">
-        <Link to="/" className="flex min-w-0 items-center gap-2.5" aria-label="MUKANDA Cozinha — página inicial">
+        <Link to="/" className="flex min-w-0 items-center gap-2.5" aria-label={`${restaurant.name} — página inicial`}>
           <span aria-hidden="true" className="grid size-9 shrink-0 place-items-center rounded-full border border-primary/50 bg-espresso text-base font-semibold text-cream">M</span>
           <span className="min-w-0 truncate font-display text-lg font-semibold tracking-tight text-foreground sm:text-xl">
             {restaurant.name}

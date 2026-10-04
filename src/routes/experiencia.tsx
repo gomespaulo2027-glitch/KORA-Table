@@ -96,7 +96,7 @@ function ExperienciaPage() {
             Comer bem também é criar memória.
           </h1>
           <p className="mt-4 leading-relaxed text-muted-foreground sm:text-lg">
-            Em {restaurant.addressNote.split("—").pop()?.trim() ?? "Luanda"}, a mesa ganha outro ritmo. No {restaurant.name}, a luz desce, as conversas esticam-se e
+            Em {restaurant.addressNote?.split("—").pop()?.trim() ?? restaurant.city ?? "Luanda"}, a mesa ganha outro ritmo. No {restaurant.name}, a luz desce, as conversas esticam-se e
             cada prato chega ao ritmo da cozinha.
           </p>
         </div>

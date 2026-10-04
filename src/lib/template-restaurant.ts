@@ -33,7 +33,4 @@ export const templateRestaurant: TemplateRestaurant = {
     { days: "Sábado", time: "12h30 – 23h00" },
     { days: "Domingo e segunda", time: "Fechado" },
   ],
-  instagram: undefined,
-  facebook: undefined,
-  mapUrl: undefined,
 };

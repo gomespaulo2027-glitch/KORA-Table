@@ -32,7 +32,7 @@ export function SiteHeader() {
         <Link
           to="/"
           className="flex min-w-0 items-center gap-2.5"
-          aria-label="KORA Table — página inicial"
+          aria-label="MUKANDA Cozinha — página inicial"
         >
           <span
             aria-hidden="true"
@@ -41,7 +41,7 @@ export function SiteHeader() {
             K
           </span>
           <span className="min-w-0 truncate font-display text-lg font-semibold tracking-tight text-foreground sm:text-xl">
-            KORA <span className="font-normal italic text-primary">Table</span>
+            MUKANDA <span className="font-normal italic text-primary">Table</span>
           </span>
         </Link>
 

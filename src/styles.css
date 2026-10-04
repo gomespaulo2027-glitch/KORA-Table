@@ -1,0 +1,219 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * KORA Table — design system
+ * Paleta quente: creme claro, terracota, areia, espresso.
+ * Tipografia: Fraunces (títulos) + Karla (texto).
+ */
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+  --font-display: var(--font-display);
+  --font-sans: var(--font-sans);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-espresso: var(--espresso);
+  --color-cream: var(--cream);
+  --color-clay: var(--clay);
+  --color-ochre: var(--ochre);
+  --color-ring-offset-background: var(--background);
+}
+
+:root {
+  --radius: 0.9rem;
+  --font-display: "Fraunces", "Georgia", serif;
+  --font-sans: "Karla", "Segoe UI", system-ui, sans-serif;
+  --background: oklch(0.972 0.014 84);
+  --foreground: oklch(0.245 0.028 48);
+  --card: oklch(0.995 0.006 92);
+  --card-foreground: oklch(0.245 0.028 48);
+  --popover: oklch(0.995 0.006 92);
+  --popover-foreground: oklch(0.245 0.028 48);
+  --primary: oklch(0.515 0.115 47);
+  --primary-foreground: oklch(0.982 0.014 84);
+  --secondary: oklch(0.925 0.024 82);
+  --secondary-foreground: oklch(0.33 0.035 48);
+  --muted: oklch(0.94 0.017 82);
+  --muted-foreground: oklch(0.455 0.03 52);
+  --accent: oklch(0.815 0.09 78);
+  --accent-foreground: oklch(0.28 0.04 50);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.984 0.003 247.858);
+  --border: oklch(0.885 0.022 80);
+  --input: oklch(0.885 0.022 80);
+  --ring: oklch(0.515 0.115 47);
+  --espresso: oklch(0.22 0.025 45);
+  --cream: oklch(0.972 0.014 84);
+  --clay: oklch(0.515 0.115 47);
+  --ochre: oklch(0.68 0.105 76);
+  --chart-1: var(--primary);
+  --chart-2: var(--ochre);
+  --chart-3: var(--espresso);
+  --chart-4: var(--clay);
+  --chart-5: var(--muted-foreground);
+  --sidebar: var(--card);
+  --sidebar-foreground: var(--foreground);
+  --sidebar-primary: var(--primary);
+  --sidebar-primary-foreground: var(--primary-foreground);
+  --sidebar-accent: var(--secondary);
+  --sidebar-accent-foreground: var(--secondary-foreground);
+  --sidebar-border: var(--border);
+  --sidebar-ring: var(--ring);
+}
+
+/* Modo escuro não é usado nesta versão; mantido apenas por compatibilidade. */
+.dark {
+  --background: oklch(0.245 0.028 48);
+  --foreground: oklch(0.972 0.014 84);
+  --card: oklch(0.3 0.03 48);
+  --card-foreground: oklch(0.972 0.014 84);
+  --popover: oklch(0.3 0.03 48);
+  --popover-foreground: oklch(0.972 0.014 84);
+  --primary: oklch(0.72 0.12 55);
+  --primary-foreground: oklch(0.245 0.028 48);
+  --secondary: oklch(0.34 0.03 50);
+  --secondary-foreground: oklch(0.972 0.014 84);
+  --muted: oklch(0.34 0.03 50);
+  --muted-foreground: oklch(0.75 0.03 80);
+  --accent: oklch(0.42 0.05 55);
+  --accent-foreground: oklch(0.972 0.014 84);
+  --destructive: oklch(0.704 0.191 22.216);
+  --destructive-foreground: oklch(0.984 0.003 247.858);
+  --border: oklch(1 0 0 / 12%);
+  --input: oklch(1 0 0 / 16%);
+  --ring: oklch(0.72 0.12 55);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+    font-weight: 500;
+    letter-spacing: -0.01em;
+  }
+
+  ::selection {
+    background-color: color-mix(in oklab, var(--clay) 25%, transparent);
+  }
+
+  :where(a, button, input, textarea, select, summary, [tabindex]):focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* Animações discretas */
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@utility animate-rise {
+  animation: rise-in 0.8s cubic-bezier(0.22, 0.61, 0.36, 1) both;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .animate-rise {
+    animation: none;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Contentor comum a todas as secções */
+@utility shell {
+  width: 100%;
+  max-width: 72rem;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+
+  @media (min-width: 640px) {
+    padding-inline: 2rem;
+  }
+}
+
+/* Etiqueta pequena em versais, usada acima dos títulos */
+@utility eyebrow {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+}

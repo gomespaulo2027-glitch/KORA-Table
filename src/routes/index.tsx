@@ -34,24 +34,18 @@ export const Route = createFileRoute("/")({
 const highlights = [
   {
     image: camaraoImage,
-    alt: "Camarões grelhados com manteiga de piri-piri, limão chamuscado e coriandros, sobre um prato escuro de pedra.",
-    name: "Camarão piri-piri na grelha",
-    description: "Manteiga de piri-piri, limão chamuscado e arroz de coco.",
-    price: "12.500 Kz",
+    alt: "Prato em destaque do MUKANDA Cozinha.",
+    ...menuCategories[1].dishes[0],
   },
   {
     image: polvoImage,
-    alt: "Salada de polvo grelhado com coriandros, cebola-roxa e lascas de batata-doce tostada numa tigela de cerâmica artesanal.",
-    name: "Polvo salteado à coriandros",
-    description: "Cebola-roxa, coriandros frescos e batata-doce em lasca.",
-    price: "6.800 Kz",
+    alt: "Prato em destaque do MUKANDA Cozinha.",
+    ...menuCategories[1].dishes[1],
   },
   {
     image: sobremesaImage,
-    alt: "Fatia de mousse de coco com caramelo escorrendo e lascas de coco tostado num prato escuro de cerâmica.",
-    name: "Cocada cremosa com caramelo",
-    description: "Mousse de coco, caramelo mascavado e coco tostado.",
-    price: "3.200 Kz",
+    alt: "Sobremesa em destaque do MUKANDA Cozinha.",
+    ...menuCategories[2].dishes[0],
   },
 ];
 
@@ -115,9 +109,9 @@ function HomePage() {
               Sabores de família, tratados com técnica e precisão.
             </h2>
             <p className="mt-5 leading-relaxed text-muted-foreground">
-              A cozinha do MUKANDA Cozinha parte dos sabores que todos conhecemos — moamba, calulu,
-              funge, peixe da costa — e trata cada um como um prato de autor: produtos de mercado,
-              cocções longas e apresentação elegante, sem perder a alma.
+              A cozinha do {restaurant.name} parte de sabores angolanos e trata cada prato como uma
+              criação de autor: produtos de mercado, cocções cuidadas e apresentação elegante, sem
+              perder a alma.
             </p>
             <ul className="mt-7 space-y-4">
               {[

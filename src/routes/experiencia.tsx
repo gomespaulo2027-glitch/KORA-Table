@@ -16,13 +16,13 @@ export const Route = createFileRoute("/experiencia")({
       {
         name: "description",
         content:
-          `O ambiente do ${restaurant.name}: uma sala de barro e madeira em Luanda, luz de fim de tarde, terraço e uma cozinha aberta. Site de demonstração fictício.`,
+          `O ambiente do ${restaurant.name}: uma sala de barro e madeira em ${restaurant.city}, luz de fim de tarde, terraço e uma cozinha aberta. Site de demonstração fictício.`,
       },
       { property: "og:title", content: `Experiência — ${restaurant.name}` },
       {
         property: "og:description",
         content:
-          `Ambiente, galeria e detalhes da experiência no ${restaurant.name}, restaurante contemporâneo fictício em Luanda.`,
+          `Ambiente, galeria e detalhes da experiência no ${restaurant.name}, restaurante contemporâneo fictício em ${restaurant.city}.`,
       },
       { property: "og:url", content: "/experiencia" },
       { property: "og:type", content: "website" },

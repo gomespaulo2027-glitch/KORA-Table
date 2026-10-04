@@ -1,18 +1,6 @@
-import { templateRestaurant } from "./template-restaurant";
+import { restaurant, menuCategories, testimonials } from "./client-config";
 
-export const restaurant = {
-  city: templateRestaurant.city,
-  name: templateRestaurant.name,
-  tagline: templateRestaurant.tagline,
-  address: templateRestaurant.address,
-  addressNote: templateRestaurant.addressNote,
-  phoneDisplay: templateRestaurant.phoneDisplay,
-  phoneHref: templateRestaurant.phoneHref,
-  whatsappHref: templateRestaurant.whatsappHref,
-  whatsappDisplay: templateRestaurant.whatsappDisplay,
-  email: templateRestaurant.email,
-  hours: templateRestaurant.openingHours,
-};
+export { restaurant, menuCategories, testimonials } from "./client-config";
 
 export type Dish = { name: string; description: string; price: string; tag?: string };
 export type MenuCategory = { id: string; title: string; intro?: string; dishes: Dish[] };

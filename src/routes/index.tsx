@@ -11,17 +11,17 @@ const sobremesaImage = "https://images.unsplash.com/photo-1551024506-0bccd828d30
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "MUKANDA Cozinha — Sabores de Angola, reinterpretados à mesa" },
+      { title: `${restaurant.name} — ${restaurant.tagline}` },
       {
         name: "description",
         content:
-          "Cozinha angolana de autor fictício em Luanda: cozinha angolana reinterpretada, pratos de assinatura e ambiente acolhedor. Reservas pelo WhatsApp. Site de demonstração.",
+          `${restaurant.tagline} em ${restaurant.city}: cozinha reinterpretada, pratos de assinatura e ambiente acolhedor. Reservas pelo WhatsApp. Site de demonstração.`,
       },
-      { property: "og:title", content: "MUKANDA Cozinha — Sabores de Angola, reinterpretados à mesa" },
+      { property: "og:title", content: `${restaurant.name} — ${restaurant.tagline}` },
       {
         property: "og:description",
         content:
-          "Cozinha angolana reinterpretada num ambiente contemporâneo em Luanda. Reservas pelo WhatsApp. Site de demonstração.",
+          `${restaurant.tagline} num ambiente contemporâneo em ${restaurant.city}. Reservas pelo WhatsApp. Site de demonstração.`,
       },
       { property: "og:url", content: "/" },
       { property: "og:type", content: "website" },
@@ -47,7 +47,7 @@ function HomePage() {
       <section className="relative isolate overflow-hidden" aria-labelledby="hero-title">
         <img
           src={heroImage}
-          alt="Prato de assinatura do MUKANDA Cozinha: peixe grelhado com banana-pão, salada fresca e molho, servido em cerâmica escura sobre toalha de linho creme."
+          alt={`Prato de assinatura do ${restaurant.name}: peixe grelhado com banana-pão, salada fresca e molho, servido em cerâmica escura sobre toalha de linho creme.`}
           width={1920}
           height={1080}
           className="absolute inset-0 -z-10 h-full w-full object-cover"
@@ -57,7 +57,7 @@ function HomePage() {
         <div className="shell flex min-h-[78svh] flex-col justify-end py-16 sm:min-h-[82svh] sm:justify-center sm:py-24">
           <div className="max-w-2xl animate-rise">
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-ochre">
-              Luanda · Cozinha angolana de autor
+              {restaurant.city} · {restaurant.tagline}
             </p>
             <h1
               id="hero-title"
@@ -155,7 +155,7 @@ function HomePage() {
                 className="aspect-[4/5] w-full rounded-3xl object-cover shadow-xl"
               />
               <p className="absolute bottom-4 left-4 right-4 rounded-2xl bg-espresso/85 px-5 py-3 text-sm font-medium text-cream backdrop-blur">
-                Peixe grelhado à Mukanda — servido com banana-pão e legumes.
+                {`${menuCategories[1]?.dishes[0]?.name ?? "Prato de assinatura"} — servido com banana-pão e legumes.`}
               </p>
             </div>
           </Reveal>

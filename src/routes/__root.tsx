@@ -6,10 +6,10 @@ import {
   Scripts,
   type ErrorComponentProps,
 } from "@tanstack/react-router";
-import { useEffect, type ReactNode } from "react";
+import { type ReactNode } from "react";
+
 
 import appCss from "../styles.css?url";
-import { reportLovableError } from "../lib/lovable-error-reporting";
 import { SiteHeader } from "@/components/kora/site-header";
 import { SiteFooter } from "@/components/kora/site-footer";
 
@@ -43,10 +43,6 @@ function NotFoundComponent() {
 
 function ErrorComponent({ error, reset }: ErrorComponentProps) {
   console.error(error);
-  useEffect(() => {
-    reportLovableError(error, { boundary: "tanstack_root_error_component" });
-  }, [error]);
-
   return (
     <div className="shell flex min-h-[60vh] flex-col items-center justify-center py-24 text-center">
       <p className="eyebrow">Algo falhou</p>

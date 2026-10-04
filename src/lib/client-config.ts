@@ -5,13 +5,13 @@ export type RestaurantConfig = {
   tagline: string;
   city: string;
   address: string;
-  addressNote?: string;
+  addressNote: string;
   phoneDisplay: string;
   phoneHref: string;
   whatsappDisplay: string;
   whatsappHref: string;
   email: string;
-  openingHours: Array<{ days: string; time: string }>;
+  hours: Array<{ days: string; time: string }>;
   instagram?: string;
   facebook?: string;
   mapUrl?: string;
@@ -28,7 +28,7 @@ export const restaurant: RestaurantConfig = {
   whatsappDisplay: "+244 922 111 222",
   whatsappHref: "https://wa.me/244922111222",
   email: "ola@mukanda.example",
-  openingHours: [
+  hours: [
     { days: "Terça a sexta", time: "12h00 – 15h00 · 18h00 – 22h30" },
     { days: "Sábado", time: "12h30 – 23h00" },
     { days: "Domingo e segunda", time: "Fechado" },
